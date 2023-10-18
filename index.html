@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Travel Guide</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Places
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://en.wikipedia.org/wiki/Char_Dham"><strong>CharDham</strong><span
+                                        class="badge bg-secondary">New</span></a></li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Delhi">Delhi</a></li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Maharastra">Maharastra</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kolkata">Kolkata</a></li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Karnataka">Karnataka</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Jammu">Jammu</a></li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Tamilnadu">Tamilnadu</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark mx-1" type="submit">Search</button>
+
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#login">
+                        Login
+                    </button>
+
+                    <button type="button" class="btn btn-info mx-1" data-bs-toggle="modal" data-bs-target="#signup">
+                        SignUp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- login modal -->
+    <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+
+                    <label for="inputPassword5" class="form-label">Password</label>
+                    <input type="password" id="inputPassword5" class="form-control"
+                        aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="form-text">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                        spaces, special characters, or emoji.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- signup modal -->
+    <div class="modal fade" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+
+                    <label for="inputPassword5" class="form-label">Password</label>
+                    <input type="password" id="inputPassword5" class="form-control"
+                        aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="form-text">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                        spaces, special characters, or emoji.
+                    </div>
+                    <label for="inputPassword5" class="form-label">Confirm Password</label>
+                    <input type="password" id="inputPassword5" class="form-control"
+                        aria-describedby="passwordHelpBlock">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Alert!</strong> Travellers must be physically fit.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/img1.jpeg" class="d-block w-100" alt="nature">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to Traveller's Guide</h5>
+                    <button class="btn btn-light"><a href="https://en.wikipedia.org/wiki/Taj_Mahal"
+                            style="text-decoration: none; color: black;">About</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img4.jpeg" class="d-block w-100" alt="landscape">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The best choice</h5>
+                    <button class="btn btn-light"><a href="https://en.wikipedia.org/wiki/Rajasthan"
+                            style="text-decoration: none; color: black;">About</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img2.jpeg" class="d-block w-100" alt="hiking">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>For all</h5>
+                    <button class="btn btn-light"><a href="https://en.wikipedia.org/wiki/Golconda"
+                            style="text-decoration: none; color: black;">About</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img3.jpeg" class="d-block w-100" alt="mountain">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Happy Journey!!</h5>
+                    <button class="btn btn-light"><a href="https://en.wikipedia.org/wiki/Kashmir"
+                            style="text-decoration: none; color: black;">About</a></button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container-md my-5 d-flex">
+
+        <div class="card mb-3 mx-4 d-flex justify-content-center align-items-center" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/card1.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Chennai</h5>
+                        <p class="card-text">Chennai is the capital city of Tamil Nadu, the southernmost state of
+                            India.
+                        </p>
+
+                        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#chennai"
+                            aria-controls="offcanvasExample">
+                            More
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="chennai"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Chennai</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    It is the state's primate city both in area and population and is located on the
+                                    Coromandel Coast of the Bay of Bengal. According to the 2011 Indian census,
+                                    Chennai
+                                    is the sixth-most populous city in India and forms the fourth-most populous
+                                    urban
+                                    agglomeration. Incorporated in 1866, the Greater Chennai Corporation is the
+                                    oldest
+                                    municipal corporation of India and the second oldest in the world after London.
+
+                                    Historically, Chennai and surroundings were part of the Chola, Pandya, Pallava
+                                    and
+                                    Vijayanagara kingdoms for many centuries. The coastal land, which then contained
+                                    the
+                                    fishing village Madrasapattinam, was purchased by the British East India Company
+                                    from the Nayak ruler Damarla Chennapa Nayaka, in the 17th century. The British
+                                    garrison established the Madras city and port, and built Fort St. George—the
+                                    first
+                                    British fortress in India—which the French won over briefly in 1746, before
+                                    becoming
+                                    the winter capital of the Madras Presidency, a colonial province of the British
+                                    Raj
+                                    in the Indian subcontinent. After India gained its independence in 1947, Madras
+                                    continued as the capital city of the Madras State and present-day Tamil Nadu.
+                                    The
+                                    city was officially renamed as Chennai in 1996.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card mb-3 mx-4 d-flex justify-content-center align-items-center" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/card2.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Bengaluru</h5>
+                        <p class="card-text">Bengaluru is the capital city of karnataka, the southernmost state of
+                            India. </p>
+
+                        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#bengaluru" aria-controls="bengaluru">
+                            More
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="bengaluru" aria-labelledby="card2">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="card2">Bengaluru</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    It has a population of more than 8 million and a metropolitan population of
+                                    around
+                                    11 million, making it India's third most populous city and fifth most populous
+                                    urban
+                                    agglomeration, as well as South India's second-largest urban agglomeration, and
+                                    the
+                                    27th largest city in the world.[10] Located on the Deccan Plateau, at a height
+                                    of
+                                    over 900 m (3,000 ft) above sea level, Bangalore has a pleasant climate
+                                    throughout
+                                    the year, with its parks and green spaces earning it the reputation of India's
+                                    "Garden City".[11] Its elevation is the highest among India's major cities.[12]
+
+                                    The city's history dates back to around 890, as found in a stone inscription
+                                    found
+                                    at the Nageshwara Temple in Begur, Bangalore. In 1537, Kempé Gowdā, a feudal
+                                    ruler
+                                    under the Vijayanagara Empire, established a mud fort, considered the foundation
+                                    of
+                                    modern Bangalore and its oldest areas, or pétés, which still exist. After the
+                                    fall
+                                    of the Vijayanagara Empire, Kempe Gowda declared independence; in 1638, a large
+                                    Adil
+                                    Shahi Bijapur army defeated Kempe Gowda III, and Bangalore came under Shahaji
+                                    Bhonsle as a jagir, which later became his capital. The Mughals later captured
+                                    Bangalore and sold it to Maharaja Devaraja Wodeyar II of the Kingdom of
+                                    Mysore.[13]
+                                    When Haider Ali seized control of the kingdom, Bangalore's administration passed
+                                    into his hands.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-md my-5 d-flex">
+        <div class="card mb-3 mx-4 d-flex justify-content-center align-items-center" style="max-width: 540px;">
+
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/card3.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Kolkata</h5>
+                        <p class="card-text">Kolkata is the capital city of West Bengal, the easternmost state of
+                            India.
+                        </p>
+
+                        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#kolkata"
+                            aria-controls="kolkata">
+                            More
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="kolkata" aria-labelledby="">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="">Kolkata</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    It lies on the eastern bank of the Hooghly River, 80 km (50 mi) west of the
+                                    border
+                                    with Bangladesh. It is the primary financial and commercial center of eastern
+                                    and
+                                    northeastern India.[16] Kolkata is the seventh most populous city of India with
+                                    an
+                                    estimated city proper population of 4.5 million (0.45 crore).[17] It is the
+                                    centre
+                                    of the Kolkata Metropolitan Region, one of the most populous metropolitan area
+                                    in
+                                    the world with a population of over 15 million (1.5 crore) residents. Kolkata is
+                                    the
+                                    de facto cultural capital of India and historically and culturally significant
+                                    city
+                                    in the historic region of Bengal.[1][18][19] It is the second largest
+                                    Bengali-speaking city in the world. It has the highest number of nobel laureates
+                                    among all cities in India.
+
+                                    The three villages that predated Calcutta were ruled by the Nawab of Bengal
+                                    under
+                                    Mughal suzerainty. After the Nawab granted the East India Company a trading
+                                    licence
+                                    in 1690,[20] the area was developed by the Company into Fort William. Nawab
+                                    Siraj
+                                    ud-Daulah occupied the fort in 1756 but was defeated at the Battle of Plassey in
+                                    1757, after his general Mir Jafar mutinied in support of the Company, and was
+                                    later
+                                    made the Nawab for a brief time.[21] Under company and later crown rule,
+                                    Calcutta
+                                    served as the de facto capital of India until 1911. Calcutta was the second
+                                    largest
+                                    city in the British Empire, after London.[22] and was the center of bureaucracy,
+                                    politics, law, education, science and the arts in India. The city was associated
+                                    with many of the figures and movements of the Bengali Renaissance. It was the
+                                    hotbed
+                                    of the Indian nationalist movement.[23] The University of Calcutta and its
+                                    affiliated colleges produced many leading figures of South Asia.
+
+                                    Kolkata's architecture includes many imperial landmarks, including the Victoria
+                                    Memorial, Howrah Bridge and the Grand Hotel. The city's heritage includes
+                                    India's
+                                    only Chinatown and remnants of Jewish, Armenian, Greek and Anglo-Indian
+                                    communities.
+                                    The city is closely linked with Bhadralok culture and the Zamindars of Bengal,
+                                    including Bengali Hindu, Bengali Muslim and tribal aristocrats. The partition of
+                                    Bengal affected the fortunes of the city. In the late 20th century, the city
+                                    hosted
+                                    the government-in-exile of Bangladesh during the Pakistani Civil War in
+                                    1971;[24] it
+                                    built India's first subway; and it was overtaken by Mumbai (formerly Bombay) as
+                                    India's largest city. The Port of Kolkata is India's oldest operating port. The
+                                    city
+                                    is often regarded as India's cultural capital.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+        <div class="card mb-3 mx-4 d-flex justify-content-center align-items-center" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/card4.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Hydrabad</h5>
+                        <p class="card-text">Hydrabad is the capital and largest city of the Indian state of
+                            Telangana.
+                        </p>
+
+                        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#hydrabad"
+                            aria-controls="hydrabad">
+                            More
+                        </button>
+
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="hydrabad" aria-labelledby="card4">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="card4">Hydrabad</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    It occupies 650 km2 (250 sq mi) on the Deccan Plateau along the banks of the
+                                    Musi
+                                    River, in the northern part of Southern India. With an average altitude of 542 m
+                                    (1,778 ft), much of Hyderabad is situated on hilly terrain around artificial
+                                    lakes,
+                                    including the Hussain Sagar lake, predating the city's founding, in the north of
+                                    the
+                                    city centre. According to the 2011 Census of India, Hyderabad is the fourth-most
+                                    populous city in India with a population of 6.9 million residents within the
+                                    city
+                                    limits, and has a population of 9.7 million residents in the metropolitan
+                                    region,
+                                    making it the sixth-most populous metropolitan area in India. With an output of
+                                    US$74 billion, Hyderabad has the fifth-largest urban economy in India.
+
+                                    The Qutb Shahi dynasty's Muhammad Quli Qutb Shah established Hyderabad in 1591
+                                    to
+                                    extend the capital beyond the fortified Golconda. In 1687, the city was annexed
+                                    by
+                                    the Mughals. In 1724, Asaf Jah I, the Mughal viceroy, declared his sovereignty
+                                    and
+                                    founded the Asaf Jahi dynasty, also known as the Nizams. Hyderabad served as the
+                                    imperial capital of the Asaf Jahi's from 1769 to 1948. As capital of the
+                                    princely
+                                    state of Hyderabad, the city housed the British Residency and cantonment until
+                                    Indian independence in 1947. Hyderabad was annexed by the Indian Union in 1948
+                                    and
+                                    continued as a capital of Hyderabad State from 1948 to 1956. After the
+                                    introduction
+                                    of the States Reorganisation Act of 1956, Hyderabad was made the capital of the
+                                    newly formed Andhra Pradesh. In 2014, Andhra Pradesh was split to form the state
+                                    of
+                                    Telangana, and Hyderabad became the joint capital of the two states with a
+                                    transitional arrangement scheduled to end in 2024. Since 1956, the city has
+                                    housed
+                                    the Rashtrapati Nilayam, the winter office of the president of India.
+
+                                    Relics of the Qutb Shahi and Nizam eras remain visible today; the Charminar has
+                                    come
+                                    to symbolise the city. By the end of the early modern era, the Mughal Empire had
+                                    declined in the Deccan, and the Nizam's patronage attracted men of letters from
+                                    various parts of the world. A distinctive culture arose from the amalgamation of
+                                    local and migrated artisans, with Painting, handicraft, jewellery, literature,
+                                    dialect and clothing are prominent still today. Through its cuisine, the city is
+                                    listed as a creative city of gastronomy by UNESCO. The Telugu film industry
+                                    based in
+                                    the city is the highest-grossing film industry in India as of 2021.
+
+                                    Until the 19th century Hyderabad was known for the pearl industry and was
+                                    nicknamed
+                                    the "City of Pearls", and was the only trading centre for Golconda diamonds in
+                                    the
+                                    world. Many of the city's historical and traditional bazaars remain open.
+                                    Hyderabad's central location between the Deccan Plateau and the Western Ghats,
+                                    and
+                                    industrialisation throughout the 20th century attracted major Indian research,
+                                    manufacturing, educational and financial institutions. Since the 1990s, the city
+                                    has
+                                    emerged as an Indian hub of pharmaceuticals and biotechnology and information
+                                    technology. The formation of the special economic zones of Hardware Park and
+                                    HITEC
+                                    City, dedicated to information technology, has encouraged leading multinationals
+                                    to
+                                    set up operations in Hyderabad.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 
+    <div class="container-md row">
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+
+    </div> -->
+
+
+    <footer class="container my-xl-5">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; 2022–2027 Traveller's Guide, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+
+
+    <hr class="featurette-divider">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+
+
+</body>
+
+</html>
